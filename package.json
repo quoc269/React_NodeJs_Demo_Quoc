@@ -1,0 +1,30 @@
+{
+  "name": "demo_v05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client":"npm run start --prefix client",
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "QuocNguyen",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.6.0",
+    "concurrently": "^6.0.2",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.1",
+    "install": "^0.13.0",
+    "moment": "^2.29.1",
+    "npm": "^7.11.2",
+    "react-datetime": "^3.0.4",
+    "react-images": "^1.2.0-beta.7",
+    "react-router-dom": "^5.2.0"
+  }
+}
